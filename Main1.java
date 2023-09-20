@@ -109,55 +109,58 @@ public class Main1 {
         System.out.println("4-Цвет");
         Scanner scanner = new Scanner(System.in);
         int num = scanner.nextInt();
-        if(num == 1){
-            HashMap<Double,Double> mapRam = searcherRam();
+        if(num == 1) {
+            HashMap<Double, Double> mapRam = searcherRam();
             System.out.println("2-Объем жесткого диска");
             System.out.println("3-Операционная систем");
             System.out.println("4-Цвет");
             System.out.println("5-Показать результат");
             Scanner scanner3 = new Scanner(System.in);
             int num1 = scanner3.nextInt();
-            if(num1 == 2){
-                HashMap<Integer,Integer> mapHard = searcherHard();
+            if (num1 == 2) {
+                HashMap<Integer, Integer> mapHard = searcherHard();
                 System.out.println("3-Операционная систем");
                 System.out.println("4-Цвет");
                 System.out.println("5-Показать результат");
                 Scanner scanner4 = new Scanner(System.in);
                 int num2 = scanner4.nextInt();
-                if(num2 == 3){
+                if (num2 == 3) {
                     String os = searcherOS();
                     System.out.println("4-Цвет");
                     System.out.println("5-Показать результат");
                     Scanner scanner5 = new Scanner(System.in);
                     int num3 = scanner5.nextInt();
-                    if(num3 == 4){
+                    if (num3 == 4) {
                         String color = searcherColor();
-                        System.out.println(searchColor(searchOS(searchHard(searchRAM(set,mapRam),mapHard),os),color));
+                        System.out.println(searchColor(searchOS(searchHard(searchRAM(set, mapRam), mapHard), os), color));
                     }
-                    if(num3 == 5){
-                        System.out.println(searchOS(searchHard(searchRAM(set,mapRam),mapHard),os));
+                    if (num3 == 5) {
+                        System.out.println(searchOS(searchHard(searchRAM(set, mapRam), mapHard), os));
                     }
-                if(num2 == 4){
+                }
+                if (num2 == 4) {
                     String color1 = searcherColor();
-                    System.out.println(searchColor(searchHard(searchRAM(set,mapRam),mapHard),color1));
+                    System.out.println(searchColor(searchHard(searchRAM(set, mapRam), mapHard), color1));
                 }
-                if(num2 == 5){
-                    System.out.println(searchHard(searchRAM(set,mapRam),mapHard));
+                if (num2 == 5) {
+                    System.out.println(searchHard(searchRAM(set, mapRam), mapHard));
                 }
-            if(num1 == 3){
+            }
+            if (num1 == 3) {
                 String os1 = searcherOS();
                 System.out.println("4-Цвет");
                 System.out.println("5-Показать результат");
                 Scanner scanner6 = new Scanner(System.in);
                 int num4 = scanner6.nextInt();
-                if(num4 == 4){
+                if (num4 == 4) {
                     String color2 = searcherColor();
-                    System.out.println(searchColor(searchOS(searchRAM(set,mapRam),os1),color2));
+                    System.out.println(searchColor(searchOS(searchRAM(set, mapRam), os1), color2));
                 }
-                if(num4 == 5){
-                    System.out.println(searchOS(searchRAM(set,mapRam),os1));
+                if (num4 == 5) {
+                    System.out.println(searchOS(searchRAM(set, mapRam), os1));
                 }
             }
+        }
         if(num == 2){
             HashMap<Integer,Integer> mapHard1 = searcherHard();
             System.out.println("3-Операционная систем");
@@ -198,7 +201,7 @@ public class Main1 {
                 System.out.println(searchColor(searchOS(set,os2),color3));
             }
             if(num5 == 5){
-                System.out.println(searchOS(searchHard(searchRAM(set,mapRam),mapHard),os2));
+                System.out.println(searchOS(set,os2));
             }
         }
         if(num == 4){
@@ -208,10 +211,10 @@ public class Main1 {
         if(num == 5){
             System.out.println(set);
         }
-            }
-            }
-        }
     }
+
+
+
     static public HashMap<Double,Double> searcherRam(){
         HashMap<Double,Double> mapRam = new HashMap<>();
         Double min = 0.0;
